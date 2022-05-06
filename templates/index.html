@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="first-side">
+              <!-- <img id="my-foto" class="rounded mx-auto d-block" src="ikrom_foto.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col">
+            <div style="margin-top: 100px;" class="second-side">
+              {% if user.is_authenticated %}
+              <p style="color: White">Welcome, {{ user.username }}!</p>
+              {% else %}
+              <p style="color: White">You haven't logged in to web site yet ;( </p>
+              {% endif %}
+              <p class="paragraph">My name is Ikrom Ibrokhimov.<br>This is my Portfolio website.<br><br>You can find my information at top bars.</p>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second-part">
+        <br>
+        <div class="skills-bar">
+          <h1 id="skill-text">Skills</h1>
+        </div>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="progress" style="height: 70px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><p id="skill-name"><b>HTML/CSS skills</b></p></div>
+              </div>
+              <!-- first -->
+              <br>
+              <!-- second -->
+              <div class="progress" style="height: 70px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"><p id="skill-name"><b>JavaScript(JS) skills</b></p></div>
+              </div>
+              <br>
+              <!-- third -->
+              <div class="progress" style="height: 70px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><p id="skill-name"><b>(OOP)C++ skills</b></p></div>
+              </div>
+              <!-- fourth -->
+              <br>
+              <div class="progress" style="height: 70px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"><p id="skill-name"><b>Python(and Django) skills</b></p></div>
+              </div>
+            </div>
+            <!-- <div class="col">
+              <p id="skill-name"><b>HTML skill</b></p>
+              <br>
+              <p id="skill-nameC"><b>CSS skill</b></p>
+              <br>
+              <p id="skill-name"><b>(OOP)C++ skill</b></p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+{% endblock content %}
